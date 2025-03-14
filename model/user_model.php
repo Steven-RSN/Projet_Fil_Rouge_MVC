@@ -32,7 +32,7 @@
             $data = $requete->fetchAll();
 
             if(!empty($data)){
-                return ;
+                return true;
             }
 
         } catch(PDOException $e) {
