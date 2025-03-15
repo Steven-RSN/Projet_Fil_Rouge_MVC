@@ -3,7 +3,7 @@
     function addUser($co, $email, $password, $usename){
         try{
             //  1) méthode prepare()
-            $requete = $co->prepare("INSERT INTO users (name_user,email_user, mdp_user) VALUES (?,?,?,?)");
+            $requete = $co->prepare("INSERT INTO users (name_user,email_user, mdp_user) VALUES (?,?,?)");
             //  2) Compléter les ? avec un binding des paramètres
             $requete->bindParam(1, $usename, PDO::PARAM_STR);
             $requete->bindParam(2, $email, PDO::PARAM_STR);
@@ -44,7 +44,7 @@
     function getUserByEmail($co, $email){
         try{
             // 1) Requête SQL pour sélectionner l'utilisateurs
-            $requete= $co->prepare("SELECT id, name_user, email_user, mdp_user FROM users WHERE ? = email_user LIMIT 1");
+            $requete= $co->prepare("SELECT id, name_user, email_user, mdp_user FROM users WHERE email_user = ? LIMIT 1");
             // 2) compléter les ? avec un binding des paramètre
             $requete->bindParam(1, $email, PDO::PARAM_STR);
             $requete->execute();

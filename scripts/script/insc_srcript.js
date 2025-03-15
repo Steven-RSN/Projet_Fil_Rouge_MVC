@@ -6,8 +6,6 @@ const btnSub=document.getElementById('btnIns')
 
 
 
-
-
 const regexMail = /^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$/;
 const regexMDP = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
 
@@ -30,8 +28,8 @@ email.addEventListener('keyup', ()=>{
 
 
 /* REGEX MDP*/
-btnSub.addEventListener('click',function(e){
-    // e.preventDefault()
+/*btnSub.addEventListener('submit',function(e){
+    e.preventDefault()
   
     if(regexMDP.test(mdp.value) && regexMDP.test(mdpComfirme.value)){
         console.log('ok1')
@@ -39,7 +37,7 @@ btnSub.addEventListener('click',function(e){
             console.log('ok2')
             mdp.style.borderBottom = 'solid 2px rgb(67, 115, 51)';
             mdpComfirme.style.borderBottom = 'solid 2px rgb(67, 115, 51)';
-          
+           
         }else{
             messageErreur()
             
@@ -50,7 +48,7 @@ btnSub.addEventListener('click',function(e){
         messageErreur()
     }
 
-})
+})*/
 
 
 const messageErreur=function(){

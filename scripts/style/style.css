@@ -1,0 +1,1313 @@
+@import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap');
+
+@font-face {
+    font-family: 'Inria-Serif';
+    src: url('fonts/Inria_Serif/InriaSerif-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Inria-Serif-Bold';
+    src: url('fonts/Inria_Serif/InriaSerif-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Inria-Serif-Light';
+    src: url('fonts/Inria_Serif/InriaSerif-Light.ttf') format('truetype');
+}
+
+
+
+body{
+    margin: 0px;
+    font-family: Inria-Serif-Light;
+}
+
+header{
+    top: 0;
+    position: fixed;
+    width: 100%;
+    background-color: #151515;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 0.5fr;
+    transition: transform 0.4s ease-out;
+}
+
+.slide {
+    transform: translateY(-100%);
+}
+
+.marque{
+    margin-top:  15px;
+    margin-bottom: 20px;
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    font-family: "Monsieur La Doulaise", serif;
+    font-weight: 100;
+    font-size: 2em;
+    letter-spacing: 3px;
+    color: rgb(205, 203, 187);
+    border-bottom: 1px solid rgb(205, 203, 187);
+}
+
+.margin{
+    margin:0 10%;
+    
+}
+#iconUtilisateur{
+    width: 75%;
+    margin-top: 5px;  
+    
+}
+
+.menuBurger{
+    grid-column: 1/span 4;
+    grid-row: 2;
+    align-self: last baseline;
+    /* border: 1px solid white; */
+    background: rgb(38, 13, 13);
+    border-bottom: 1px solid rgb(205, 203, 187);;
+
+
+
+}
+.ulMenuBurger{
+    display: flex;
+    justify-content: space-around;
+    margin: 12px;
+    li{
+        list-style-type: none;
+        font-size: large;
+   
+        a{
+            text-decoration: none;
+            color:rgb(225, 225, 223);
+
+        }
+    }
+}
+
+#iconMenuB{
+    
+  display:none;
+}
+
+#iconMenuBg{
+    z-index: 2;
+}
+.menuLabel{
+    display: none;
+}
+
+#iconMenuB:hover{
+    transform: scale(1.1);
+    transition: 0.8s;
+}
+
+.divIconUtilisateur{   
+    grid-column: 3;
+    justify-self: flex-end; 
+    align-self: center;
+    padding: 1px;
+    border-radius: 10px;
+    border: 1px solid #CDCBBB;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+header .divIconUtilisateur:hover{
+    transform: rotate(360deg);
+    transition: 1.5s;
+}
+
+
+#Stivisk{
+    border: 2px solid;
+    border-radius: 50px;
+    border-color: rgb(255, 253, 253);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35%;
+    max-width: 145px;    
+}
+
+#imageFond{
+    width: 100%;
+    z-index: 1;
+    margin-top: -120px;
+    transform: scaleY(-1);
+}
+
+.gridTwo{
+    display: grid;
+    grid-template-columns: 0.5fr 3fr;
+ 
+}
+
+
+
+
+.filtrer{ /* a modifier---------------------------------------*/
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    align-items: flex-start;
+    width:100% ;
+    margin: 15px 0% 150px 0%;
+    padding: 10px;
+    margin-right: 50px;
+    background-color: #fafafa; 
+    border: 1px solid gray;
+    border-radius: 15px;
+    box-shadow: 6px 6px 8px  rgba(0, 0, 0, 0.1);
+    border-top: 3px solid #b7b7b7a2;
+    border-left: 3px solid #b7b7b7a2;
+    border-bottom:1px solid  #b7b7b7a2;
+    border-right: 1px solid #b7b7b7a2;
+ 
+}
+.formFiltre{
+    display: flex;
+    flex-direction: column;
+ 
+}
+
+/* .btnFiltre{
+    background-image: url(Image/icons/inputIcon/icons8bas-100.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    display: flex;;
+    width: 25px;
+    height: 20px;
+    background-color: white;
+    box-shadow: none;
+} */
+
+.btnFiltre:hover{
+    background-color:white;
+}
+
+#barreRecherche{
+    display: flex;
+    padding-left: 20px;
+    margin: 36px 0;
+    width: 100%;
+    max-width: 600px;
+    height: 50px;
+    border-radius: 18px;
+    justify-self: center;
+    align-self: center;
+    border: none;
+    box-shadow: 0px 2px 8px rgb(163, 161, 161);
+}
+
+.catNouveau{
+   
+    margin-top: 4.5%;
+  
+    h1{
+        align-self: center;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 20%;
+
+    }
+    
+    
+}
+.catPopulaire{
+   
+    text-align: center;
+   
+}
+.top{
+    font-family: "Monsieur La Doulaise";
+    height: 10px;
+    width: 50%;
+    display: flex;              
+    justify-content: center;
+    align-items: center;   
+    background: #eadc6f;;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    box-shadow: 6px 6px 8px  rgba(0, 0, 0, 0.150);
+    border-left: 1px solid #383636a2;
+    border-bottom:2px solid  #383636a2;
+    border-right: 1px solid #383636a2;
+    
+    letter-spacing: 3px;
+    font-size: 35px;
+    color: rgb(19, 19, 19);
+    transform: translate(10px)rotate(-45deg) ;
+
+    margin: 0;
+    
+    
+}
+
+.fondGris{
+    position:static;
+    height: 52px;
+    width: 80%;
+    display: flex;              
+    justify-content: center;
+    align-items: center;   
+    grid-column: 2;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom:2px solid  #bdbdbd;
+    border-top:2px solid  #bdbdbd;
+    border-right:7px solid #bdbdbd;
+    border-left:7px solid #bdbdbd;
+    box-shadow: 6px 6px 8px  rgba(0, 0, 0, 0.160);
+    font-weight: 500; 
+    letter-spacing: 3px;
+    font-size: 35px;
+    color: rgb(19, 19, 19);
+    margin-top: -1px;
+}
+
+.itemPopulaire{
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;  
+    justify-content: space-evenly; 
+    padding: 0% 10% 10% 10%;
+    margin: 15px 0 150px 0;
+    border-top-right-radius:20PX ;
+    border-bottom-right-radius:20PX ;
+    background-color: #fafafa; 
+    border-top: 2px solid #b7b7b7a2;
+    border-bottom:4px solid  #b7b7b7a2;
+    border-right: 4px solid #b7b7b7a2;
+    box-shadow: 6px 6px 8px  rgba(0, 0, 0, 0.160);
+}
+
+.itemAutre{
+    grid-column: 2;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center; 
+    justify-content: space-evenly; 
+    padding: 0% 10% 10% 10%;
+    margin: 15px 0 150px 0;
+    border-top-right-radius:20PX ;
+    border-bottom-right-radius:20PX ;
+    background-color: #fafafa; 
+    border-top: 2px solid #b7b7b7a2;
+    border-bottom:4px solid  #b7b7b7a2;
+    border-right: 4px solid #b7b7b7a2;
+    box-shadow: 6px 6px 8px  rgba(0, 0, 0, 0.160);
+}
+
+.vigniette_recette{ 
+    height: 280px;
+    width: 180px;
+    margin: 4% 4%;
+    /* border: 1px dotted black; */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    
+    
+}
+.vigniette_recette:hover{ 
+    transform: scale(1.05);
+    transition: 0.8s;
+}
+
+.titreRecette{
+    bottom: 110px;
+    margin-left: 10px;
+    font-size: 1.4em;
+    text-decoration: underline;
+    color: white;
+    font-weight: 100;
+    letter-spacing: 1px;
+    margin-top: 0;
+    top: 0;
+
+}
+
+.etoils{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.iconEtoile{
+    height: 30px;
+}
+
+.note{
+    display: inline;
+    font-size: 25px;
+    align-self: center;
+    margin-top: 18px;
+    margin-left: 10px;
+}
+
+.img_recette{
+    border-bottom: 3px solid rgb(46, 43, 43);;
+    border-right: 3px solid rgb(46, 43, 43);;
+    border-top: 2px solid rgb(46, 43, 43);;
+    border-left: 2px solid rgb(46, 43, 43);
+    background-image: url('../../Image/img_recette/burger.png');
+    width: 100%;
+    height: 100%;
+    min-width: 200px;
+    min-height: 180px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    justify-content: space-between;
+    box-shadow: 
+    4px 4px 4px 4px  rgba(0, 0, 0, 0.35),        
+    inset 0px -30px 30px rgba(0, 0, 0, 0.4), 
+    inset 0px 30px 30px rgba(0, 0, 0, 0.4);
+    
+}
+
+.temp{
+    display: flex;
+    flex-direction: row;
+}
+
+.img-utilisateur{
+    background-image: url('../../Image/alain_ducasse_img_defaut.webp');
+    background-size: cover;
+    background-position: center;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    justify-self:  left;
+    margin-left: 5px;
+    margin-top: 13px;
+
+}
+
+.nomUtilisateur{
+    letter-spacing: 1px;
+    color: white;
+    margin-left: 6px;
+}
+
+.fondGrisFooter{
+    background-color: rgb(18, 17, 17);
+    width: 100%;
+    height: 30px;
+   
+}
+
+#voirPlus{
+    position: relative;
+    justify-self:center;
+    align-self: flex-end;
+    transform: none;
+    grid-column: 2;
+    grid-row: 1;
+    height: 30px;
+    width: 105px;
+    background-image: none;
+    border: none;
+    border-radius: 6px;
+    transform: translateY(-200px);
+
+}
+
+footer{
+    margin-top: 10%;
+    background-color: rgb(38, 13, 13);
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+
+}
+
+/* page connexion */
+/*------------------ page recette -------------------*/
+.banniereTitre{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 180px 0px 30px 0px;
+    background-color: #E4E4E6;
+    text-align: center; 
+    width: 100%;
+    height: 60px;
+}
+.presentationRecetteGris{
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    flex-direction: row-reverse;
+    border-radius: 10px;
+    background-color: #e4e4e6b4;
+    border-bottom:4px solid #b7b7b7e1;
+    border-right: 4px solid #b7b7b7a2;;
+   
+
+    
+}
+.etoilsRecette{
+    grid-column: 1/3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+    div{
+        display: flex;
+        align-items: center;
+    }
+    img{
+        width: 50px;
+        height: 50px;
+        
+    }p{
+        margin-top: 10%;
+        
+    }
+}
+#iconeCoeur {
+    cursor: pointer;
+    transition: 0.8s ;
+
+}
+#iconeCoeur:hover{
+    transform: scale(1.2);
+}
+
+.nomUtilisateurRecette{
+    color: rgb(0, 0, 0);   
+    font-size: 1em;
+    line-height: 0.1;
+}
+.utilisateurRecette{
+    max-width: 500px;
+    font-size: large;
+    padding: 1%;
+    margin: 1%;
+    border-radius: 10px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 4px solid #b7b7b7a2;
+ 
+
+
+  
+}
+
+
+.img-utilisateurRecette{
+    background-image: url('../../Image/alain_ducasse_img_defaut.webp');
+    background-size: cover;
+    background-position: center;
+    align-self: center;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    justify-self:  left;
+    margin-left: 10px;
+    margin-top: 15px;
+    
+}
+.textAlign{
+    text-align: center;
+}
+.descritionUtilisateur{
+    margin-top: 12%;
+    font-size:0.85em;
+  
+}
+.imageRecette{
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 3fr;
+    margin: 1%;
+    padding: 1%;
+    border-radius: 10px;
+  
+   
+
+}
+.column{
+    display: inline-flex;
+    max-width:  220px;
+    flex-direction: column;
+    justify-content: space-between;
+   
+  
+}
+.grandeImage{
+    border: 3px solid rgb(106, 106, 106);
+    border-radius: 10px;
+    place-self: end; 
+    width: 60%;
+    min-width: 400px;
+    margin-right:1% ;
+  
+
+} 
+.petiteImage{
+    border-radius: 10px;
+    border: 3px solid rgb(106, 106, 106);
+    width: 29%;
+    min-width: 196px;
+    align-self: center;
+    margin-left: 1%;
+    align-self: flex-start;
+  
+}
+.nombre{ 
+ border-top: 1px solid black ;
+ border-bottom: 2px solid black ;
+ padding: 3px 10px;
+}
+.decr{
+    border: 1px solid black;
+    height:30px; width:25px ;text-align:center ;
+    margin:0 0 0 5px ; 
+    padding:0 ;
+    border-radius: 8px 0 0 8px;
+    background-color: #CDCBBB; 
+    transform: translateY(-2px);
+
+}
+.incr{
+    border: 1px solid black;
+    height:30px; width:25px ;
+    text-align:center ;
+    margin:0 8px 0 0 ;
+    padding:0;
+    border-radius: 0px 8px 8px 0px;
+    background-color: #CDCBBB;
+    transform: translateY(-2px);
+
+}
+
+.articleRecetteGrisIngrédiant{
+ 
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin: 1% ;
+    font-size: large;
+    line-height: 2.2;
+    padding-left: 1%;
+  
+
+    h4{
+        margin-top: 1%;
+        padding-top: 1%;
+    }
+
+}
+.test{
+    border-radius: 10px;
+    background-color: #e4e4e696 ;
+    margin-top: 3%;
+    border-bottom:4px solid #b7b7b7c6;
+    border-right: 4px solid #b7b7b7a2;;
+}
+
+.articleRecetteGrisEtapes{
+    background-color: #ffffff;
+    border-radius: 10px;
+    font-size: large;
+    line-height: 2;
+    margin: 1%;
+    padding: 1%;
+    h4{
+        margin-top: 1%;
+      
+    }
+    li{
+        margin-bottom: 10px;
+    }
+  
+
+}
+.articleRecette{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    border-bottom:4px solid #b7b7b7c6;
+    background-color:#ffffff96 ;
+    max-width: 1150px;
+
+}
+.commentaires{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.textAreaW{
+    display: grid;
+    height: 160px;
+    border-radius: 10px;
+    align-self: center;
+}
+.commentairesInfo{
+    margin-right: 40%;
+    display: flex;
+    align-items:center ;
+    p{
+        text-decoration: underline;
+        margin-left: 6px;
+    }
+
+}
+
+
+/* Page Nouvelle recette */
+
+.fondGris_{
+    font-family: Inria-Serif-Bold;
+    height: 60px;
+    margin-top: 200px;
+    font-size: large;
+    letter-spacing: 3px;
+    width: 100%;
+    background-color: lightgrey;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.formAjoutRecette{
+    box-shadow: 5px 5px 6px   rgba(0, 0, 0, 0.1);
+    border-top: 2px solid #b7b7b7a2;
+    border-left: 2px solid #b7b7b7a2;
+    border-bottom:3px solid  #b7b7b7a2;
+    border-right: 3px solid #b7b7b7a2;
+    padding:30px 0px 60px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    margin:2.2% 22%
+ 
+  
+
+}
+.inputAjoutRecette{
+    border: none;
+    border-bottom:1px solid black;
+    margin-top: 6px;
+    margin-bottom: 4em;
+    height: 50px;
+    text-align: center;
+    width: 26em;
+
+}
+
+.inputAjoutIngr{
+    border-radius:8px ;
+    margin-top: 6px;
+    margin-bottom: 4em;
+    height: 45px;
+   
+
+}
+
+.formAjoutIngredient{
+    display: grid;
+    padding: 0 8%;
+    margin-bottom: 150px;
+    grid-template-columns: repeat(3,1fr);
+    border-radius: 10px;
+    width: 60%;
+    max-width: 500px ;
+    text-align: center;
+    border-bottom:3px solid #b7b7b7c6;;
+    background-color: #bfc2ca27;
+    border-top: 1px solid #3c3a3a86;
+
+    h3{
+       grid-column: 1/4;
+       margin-top: 0px; 
+    }
+    
+    p{
+        grid-column: 2;
+        grid-row: 2;
+    }
+    #ingredient{
+        grid-column: 1/4;
+    }
+
+    div{
+        grid-column: 1/4;
+        display: flex;
+        justify-content: space-between;      
+    }
+   
+}
+
+.btnAjout{
+    margin: 24px 0;
+    grid-column: 2;
+    border-radius:6px ;
+    height: 35px;
+    width: 85px;
+    display: flex;
+    justify-self: center;
+    font-family: Inria-Serif-light;
+    font-size: large;
+    border: none;
+    border-bottom:4px solid #bab7a2;
+    border-right: 4px solid #bab7a2;
+    background-color: #CDCBBB;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.382);
+
+}
+
+.divRealisation{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    margin-bottom: 100px;
+    width: 60%;
+    max-width: 660px;
+    padding: 0 6%;
+    text-align: center;
+  
+    h2{
+        grid-row: 1;
+        grid-column: 1/span2;
+        margin-bottom: 40px;
+    }
+}
+
+.Difficulte{
+    grid-row: 2;
+    grid-template-columns: 1;
+    width: 140px;
+    border-radius: 8px;
+    height: 50px;
+}
+
+.sucreSel{
+    grid-row: 3;
+    width: 140px;
+    border-radius: 8px;
+    height: 50px;
+}
+
+.Vg{
+   grid-row: 3; 
+   grid-template-columns: 1;
+   width: 140px;
+   border-radius: 8px;
+   height: 50px;
+}
+.origine{
+    margin-left: 0px;
+    grid-row: 2;
+    grid-template-columns: 1;
+    width: 140px;
+    border-radius: 8px;
+    height: 50px;
+}
+.inputRea {
+    grid-column: 1;
+    grid-row: 4;
+    margin-top: 10px;  
+    width:140px ;
+    height: 45px;
+    border-radius: 8px;
+}
+
+.inputSelect{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 8%;
+  
+}
+/* .divPersonne" */
+.inputNbPersonne{
+    grid-column: 2;
+    margin-top: 8px;  
+    width:140px ;
+    height: 45px;
+    border-radius: 8px;
+}
+
+.formTextArea{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10%;
+    margin-bottom: 150px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 650px ;
+    text-align: center;
+    border: none;
+    border-bottom:4px solid #b7b7b7c6;
+    background: #bfc2ca47;
+    background-color: #bfc2ca27;
+    border-top: 1px solid #3c3a3a86;
+}
+
+#etapeDeRealisation{
+    padding: 8%;
+    margin-bottom: 10px;
+    height: 350px;
+    border: 1px solid;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    font-size:large;
+    
+}
+.status{
+
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    max-width: 500px;
+    border-bottom:4px solid #b7b7b7c6;
+    background-color: #bfc2ca27;
+    border-top: 1px solid #3c3a3a86;
+
+    border-radius: 10px;
+    width: 60%;
+    padding: 2% 8%;
+    li{
+        list-style-type: none;
+        margin-bottom: 15px;
+        justify-self: self-start;
+       
+    }
+
+}
+
+#AjouterRecette{
+    border-radius:6px ;
+    margin-top: 50px;
+    margin-bottom: 4em;
+    height: 45px;
+    width: 150px;
+    display: flex;
+    justify-self: center;
+    font-family: Inria-Serif-light;
+    font-size: large;
+    border: none;
+    border-bottom:4px solid #bab7a2;
+    border-right: 4px solid #bab7a2;
+    background-color: #CDCBBB;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.551);
+}
+
+
+/*  ////////////// --- Page Utilisateur --- \\\\\\\\\\\\\\  */ 
+
+
+ .marge{
+    margin:0 22em;
+ }
+/* .carteProfile {
+    margin: 70px;
+    justify-self: center;
+    position: relative;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 1em;  
+    width: 50em;
+    text-align: left;
+} */
+
+/* .gris {
+    background-color: #c0c0c0;
+    padding: 1em;
+    text-align: center;
+    border-radius: 50px 50px 0 0;
+    position: relative; /* Nécessaire pour gérer l'image qui empiète 
+} */
+
+/* .gris h2 {
+    margin: 5px;
+    padding-left: 65px;
+    font-family: Inria-Serif-light;
+    font-weight: 100;
+    letter-spacing: 3px;
+    font-size: 2em;
+    text-decoration: underline;
+    position: relative;
+
+} */
+
+/* .contenuUtilisateur {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    gap: 1em;
+} */
+
+/* .imgUtilisateur {
+    background-image: url('Image/alain_ducasse_img_defaut.webp');
+    background-size: cover;
+    background-position: center;
+    height: 220px;
+    width: 220px;
+    margin-bottom: 40px;
+    border-radius: 50%;
+    position: absolute; 
+    left: 5.6em; 
+    border: 5px solid white; 
+    z-index: 2; 
+} */
+
+/* .infoUtilisateur {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5em;
+    margin-left: 70px;
+}
+
+.infoUtilisateur p {
+    margin: 0
+}*/
+
+button { 
+    border-radius: 3px;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    background-image: url(../../Image/icons/commentaire/plus/icons8-plus-100.png);
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    border-left:1px solid #a1a1a1; 
+    border-top:1px solid #a1a1a1;
+    border-right:2px solid #a1a1a1; 
+    border-bottom:2px solid #a1a1a1;
+   
+    transform: translateX(170px) translateY(-20px); 
+}
+
+
+button:hover {
+    border-right:1px solid #a1a1a1; 
+    border-bottom:1px solid #a1a1a1;
+}
+.tailleInput{
+    width: 80%;
+}
+
+.btnSub{
+    height: 25px;
+    width: 70%;
+    align-self: center;
+    margin-top: 30px;
+    border-radius: 4px;
+    border-left:2px solid #a1a1a1; 
+    border-top:2px solid #a1a1a1;
+    border-right:3px solid #a1a1a1; 
+    border-bottom:3px solid #a1a1a1
+}
+.btnSub:hover{
+    border-left:2px solid #a1a1a1; 
+    border-top:2px solid #a1a1a1;
+    border-right:2px solid #a1a1a1; 
+    border-bottom:2px solid #a1a1a1
+}
+.ingredientsInclus_exclus{
+    border: 10px solid black;
+}
+
+/*
+.fondGrisRecetteU{
+    background: linear-gradient(to right, white, #c0c0c0, white);
+    width:60em;
+    align-content: center;
+    justify-self: center;
+    height: 50px;
+    border-top: 1px solid #ababab;
+    h1{
+        margin: 5px;
+    }
+
+}
+.hrUtilisateur{
+    width: 60%;
+    margin-top: 5px;
+    max-width: 480px;
+    border-top: 1px solid #abababcd;
+
+
+}
+.center{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+}
+.filtrerUtilisateur{
+    margin: 40px 0;
+    width: 80%;
+    min-width: 300px;
+    max-width: 550px;
+    align-self: center;
+    justify-self: center;
+    border-radius: 10px;
+}
+
+#barreRechercheUtilisateur{
+    margin-top: 30px;
+    width: 600px;
+    padding-left: 20px;
+    max-width: 550px;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0px 2px 8px rgb(163, 161, 161);
+}
+.basCarte {
+    background-color: #CDCBBB; 
+    height: 25px; 
+    width: 100%; 
+    position: relative; 
+    border-radius:0 0 50px 50px;
+} */
+
+@media screen and (max-width: 900px ){
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center; /* aligne verticalement*/
+        height: 95px;
+    }
+    .menuBurger{
+        top:0;
+        border-right:3px solid rgba(168, 170, 165, 0.61) ;
+        border-top:3px solid rgba(168, 170, 165, 0.61) ;
+        border-top-right-radius: 8px;
+        background-color: #1e0b0b;
+        height: 100%;
+        width: 350px;
+        position:fixed;
+        z-index: 1;
+        left: -450px;
+        transition: left 0.3s ease;
+    }
+    .ulMenuBurger{
+        margin-top: 45%;
+        align-self:flex-start;
+        /* margin-top: -120%; */
+        justify-items: flex-start;
+        list-style-type: circle;
+        color: aliceblue;
+    
+        
+    }
+    .ulMenuBurger li{
+        margin-top:33%;
+        font-size: large;
+        letter-spacing: 0.3em;
+        
+    }
+    .ulMenuBurger li a{
+        color: aliceblue;
+        text-decoration: none;
+    }
+    .menuLabel:checked + .menuBurger {
+        left: 0; 
+        
+    }
+    .menuLabel{
+        display: none;
+    }
+
+    #iconMenuB{
+        display: block;
+        margin-left: 20px;
+        width: 35px;
+        z-index:2;
+        align-self: center;
+        cursor: pointer;
+    }
+    
+    #iconMenuBg{
+        z-index: 2;
+    }
+    
+    #iconMenuB:hover{
+        transform: scale(1.1);
+        transition: 0.8s;
+    }
+   
+    .itemPopulaire{
+   
+        margin:0 5em;
+      
+    
+    }
+    
+    .presentationRecetteGris{
+        display: grid;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+    
+
+    }
+    .utilisateurRecette{
+        background-color: #e4e4e600;
+        border-radius: 0;
+        margin-bottom: 4%;
+      
+
+
+    }
+    .textAreaW{
+        width: 85%;
+        justify-self: center;
+    }
+
+  
+}
+
+@media screen and (max-width: 610px){
+    header{
+        height: 70px;
+    
+    }
+    .margin{
+        margin: 0;
+    }
+
+    .divIconUtilisateur{    
+        padding: 2px;
+        border: 2px solid #CDCBBB;
+        width: 42px;
+        height: 42px;
+    }
+    #Stivisk{
+        border: 1px solid;
+        border-radius: 50px;;
+        width: 25%;
+
+    }
+   
+    .itemPopulaire{
+        padding: 0;
+        background: none;
+        border: none;
+        box-shadow: none;
+    }
+    .imageRecette{
+        background-color:#ffffff00;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        min-width: 260px;       
+    
+    }
+    .titreRecette{
+        bottom: 130px;
+        font-size: 1.2em;
+    }
+    .descritionUtilisateur {
+        margin-top: 8%;
+        padding: 0 18px ;
+        font-size: 0.85em;
+    }
+  
+    .grandeImage{
+
+        align-self: center;
+        width: 90%;
+        min-width: 260px;
+        margin-right:0;
+        margin:8% 8% 0 8%;
+      
+    } 
+    .column{
+        flex-direction: row;
+        justify-content: center;
+        max-width: 0;
+        margin-top: 1.2%;
+    }
+    .petiteImage{
+       
+        width: 29%;
+        min-width:124px;
+        align-self: center;
+        margin-left: 2px;
+        margin-right: 2px;
+      
+    }
+    .presentationRecetteGris{
+        background-color: #E4E4E6;
+        margin: 1%;
+        
+    }
+    .articleRecette{
+        margin: 1%;
+        display: flex;
+        flex-direction: column;
+    
+    }
+    #etapeDeRealisation{
+        min-width: 300px;
+      
+    }
+
+}
+
+
+
+.dropzone {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    border: 1px dashed #aaa;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #666;
+    position: relative;
+}
+
+.dropzone input[type="file"] {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.dropzone:hover {
+    border-color: #4CAF50;
+    background-color: #f9fff9;
+}

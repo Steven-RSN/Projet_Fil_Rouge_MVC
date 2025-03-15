@@ -7,7 +7,7 @@
         <hr class="petitHr">
     
 
-        <form action="" method="POST" class="formInscription">
+        <form action="../controller/inscriptionController.php" method="POST" id="formulaire" class="formInscription">
             <label for="email" class="labelInsc"><!--E-mail :--></label>
             <input type="email" id="email" name="email" class="inputInsc" placeholder="Email">
 
@@ -15,12 +15,14 @@
             <input type="text" id="identifiant" name="username" class="inputInsc" placeholder="Pseudo ou nom">
 
             <label for="motDePasse" class="labelInsc"><!--Mot de passe :--></label>
-            <input type="password" name="password" name="password" id="motDePasse" placeholder="Mot de passe" class="inputInsc">
+            <input type="password" name="password" id="motDePasse" placeholder="Mot de passe" class="inputInsc">
 
             <label for="motDePasseConfirm" class="labelInsc"><!--Confirmez votre mot de passe :--></label>
             <input type="password" name="password2" id="motDePasseConfirm" placeholder="Comfirmez mot de passe" class="inputInsc">
            
-            <p id='messageMdp'class="light">* Votre mot de passe doit contenir au moins 8 caractères, inclure une majuscule, une minuscule, un chiffre et un caractère spécial.
+            <!-- <p id='messageMdp'class="light">* Votre mot de passe doit contenir au moins 8 caractères, inclure une majuscule, une minuscule, un chiffre et un caractère spécial. -->
+            <p id='messageMdp'class="light"> 
+                <?php echo "* Votre mot de passe doit contenir au moins 8 caractères, inclure une majuscule, une minuscule, un chiffre et un caractère spécial."; ?>
             </p>
 
             <input type="submit" id="btnIns" name="submit" value="S'inscrire">
