@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap');
+@font-face {
+    font-family: 'Inria-Serif';
+    src: url('fonts/Inria_Serif/InriaSerif-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Inria-Serif-Bold';
+    src: url('fonts/Inria_Serif/InriaSerif-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Inria-Serif-Light';
+    src: url('fonts/Inria_Serif/InriaSerif-Light.ttf') format('truetype');
+}
+body{
+    margin: 0px;
+    font-family: Inria-Serif-Light;
+}
+
+header{
+    top: 0;
+    position: fixed;
+    width: 100%;
+    background-color: #151515;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 0.5fr;
+    transition: transform 0.4s ease-out;
+}
+
+.slide {
+    transform: translateY(-100%);
+}
+
+.marque{
+    margin-top:  15px;
+    margin-bottom: 20px;
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    font-family: "Monsieur La Doulaise", serif;
+    font-weight: 100;
+    font-size: 2em;
+    letter-spacing: 3px;
+    color: rgb(205, 203, 187);
+    border-bottom: 1px solid rgb(205, 203, 187);
+}
+
+.margin{
+    margin:0 10%;
+    
+}
+#iconUtilisateur{
+    width: 75%;
+    margin-top: 5px;  
+    
+}
+
+.menuBurger{
+    grid-column: 1/span 4;
+    grid-row: 2;
+    align-self: last baseline;
+    /* border: 1px solid white; */
+    background: rgb(38, 13, 13);
+    border-bottom: 1px solid rgb(205, 203, 187);;
+}
+.ulMenuBurger{
+    display: flex;
+    justify-content: space-around;
+    margin: 12px;
+    li{
+        list-style-type: none;
+        font-size: large;
+   
+        a{
+            text-decoration: none;
+            color:rgb(225, 225, 223);
+
+        }
+    }
+}
+
+#iconMenuB{
+    
+  display:none;
+}
+
+#iconMenuBg{
+    z-index: 2;
+}
+.menuLabel{
+    display: none;
+}
+
+#iconMenuB:hover{
+    transform: scale(1.1);
+    transition: 0.8s;
+}
+
+.divIconUtilisateur{   
+    grid-column: 3;
+    justify-self: flex-end; 
+    align-self: center;
+    padding: 1px;
+    border-radius: 10px;
+    border: 1px solid #CDCBBB;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+header .divIconUtilisateur:hover{
+    transform: rotate(360deg);
+    transition: 1.5s;
+}
+
+#Stivisk{
+    border: 2px solid;
+    border-radius: 50px;
+    border-color: rgb(255, 253, 253);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35%;
+    max-width: 145px;    
+}
+.carteProfile {
+    margin-top: 200px;
+    justify-self: center;
+    position: relative;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 1em;  
+    width: 50em;
+    text-align: left;
+    border-radius: 50px;
+    border-top: 2px solid #b7b7b7a2;
+    border-bottom:4px solid  #b7b7b7a2;
+    border-right: 4px solid #b7b7b7a2;
+}
+.gris {
+    background-color: #CDCBBB;
+    padding: 1em;
+    text-align: center;
+    border-radius: 50px 50px 0 0;
+    position: relative; /* Nécessaire pour gérer l'image qui empiète */
+}
+.gris h2 {
+    margin: 5px;
+    padding-left: 65px;
+    font-family: Inria-Serif-light;
+    font-weight: 100;
+    letter-spacing: 3px;
+    font-size: 2em;
+    text-decoration: underline;
+    position: relative;
+
+}
+
+.contenuUtilisateur {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    gap: 1em;
+}
+.itemPopulaire{
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;  
+    justify-content: space-evenly; 
+    padding:4% 10% 10% 10%;
+    margin: 15px 0 150px 0;
+    border-top-right-radius:20PX ;
+    border-bottom-right-radius:20PX ;
+    background-color: #fafafa; 
+    border-top: 2px solid #b7b7b7a2;
+    border-bottom:4px solid  #b7b7b7a2;
+    border-right: 4px solid #b7b7b7a2;
+    box-shadow: 6px 6px 8px  rgba(0, 0, 0, 0.160);
+}
+
+.imgUtilisateur {
+    background-image: url('Image/alain_ducasse_img_defaut.webp');
+    background-size: cover;
+    background-position: center;
+    height: 220px;
+    width: 220px;
+    margin-bottom: 58px;
+    border-radius: 50%;
+    position: absolute; 
+    left: 2.8em; 
+    border: 8px solid white; 
+    z-index: 2; 
+}
+.titreRecette{
+    bottom: 110px;
+    margin-left: 10px;
+    font-size: 1.4em;
+    text-decoration: underline;
+    color: white;
+    font-weight: 100;
+    letter-spacing: 1px;
+    margin-top: 0;
+    top: 0;
+}
+
+.infoUtilisateur {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5em;
+    margin-left: 70px;
+}
+
+.infoUtilisateur p {
+    margin: 0
+}
+.img_recette{
+    border-bottom: 3px solid rgb(46, 43, 43);;
+    border-right: 3px solid rgb(46, 43, 43);;
+    border-top: 2px solid rgb(46, 43, 43);;
+    border-left: 2px solid rgb(46, 43, 43);
+    background-image: url('Image/img_recette/burger.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    min-width: 200px;
+    min-height: 180px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    justify-content: space-between;
+    box-shadow: 
+    4px 4px 4px 4px  rgba(0, 0, 0, 0.35),        
+    inset 0px -30px 30px rgba(0, 0, 0, 0.4), 
+    inset 0px 30px 30px rgba(0, 0, 0, 0.4);
+    
+}
+
+.nomUtilisateur{
+    letter-spacing: 1px;
+    color: white;
+    margin-left: 6px;
+}
+
+button { 
+    border-radius: 3px;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    background-image: url(Image/icons/commentaire/plus/icons8-plus-100.png);
+    background-size: contain;
+    /* background-repeat: no-repeat; */
+    background-position: center;
+    border: none;
+    border-left:1px solid #a1a1a1; 
+    border-top:1px solid #a1a1a1;
+    border-right:2px solid #a1a1a1; 
+    border-bottom:2px solid #a1a1a1;
+   
+    transform: translateX(185px) translateY(-20px); 
+}
+
+
+button:hover {
+    border-right:1px solid #a1a1a1; 
+    border-bottom:1px solid #a1a1a1;
+}
+.fondGrisRecetteU{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to right, white, #c0c0c0, white);
+    width:60%;
+    align-content: center;
+    justify-self: center;
+    height: 50px;
+    border-top: 1px solid #ababab;
+    h1{
+        margin: 5px;
+    }
+
+}
+.hrUtilisateur{
+    width: 60%;
+    margin-top: 5px;
+    max-width: 480px;
+    border-top: 1px solid #abababcd;
+
+
+}
+.center{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+}
+.filtrerUtilisateur{
+    margin: 40px 0;
+    width: 80%;
+    min-width: 300px;
+    max-width: 550px;
+    align-self: center;
+    justify-self: center;
+    border-radius: 10px;
+}
+
+#barreRechercheUtilisateur{
+    margin-top: 30px;
+    width: 600px;
+    padding-left: 20px;
+    max-width: 550px;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0px 2px 8px rgb(163, 161, 161);
+}
+.basCarte {
+    background-color: #260d0de8; /* Couleur personnalisée pour le bas */
+    height: 24px; /* Hauteur de la bande */
+    width: 100%; /* Assure qu'elle prend toute la largeur de la carte */
+    position: relative; /* Inclus dans le flux de la carte */
+    border-radius:0 0 50px 50px;
+    border-top: 3px solid #b7b7b7a2;
+}

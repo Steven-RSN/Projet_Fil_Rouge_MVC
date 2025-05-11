@@ -216,7 +216,6 @@ header .divIconUtilisateur:hover{
     width: 160px;
     display: flex;
     justify-self: center;
-    cursor: pointer;
     font-family: Inria-Serif-light;
     font-size: large;
     border: none;
@@ -225,15 +224,11 @@ header .divIconUtilisateur:hover{
     background-color: #CDCBBB;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.551);
 }
-#btnIns:hover{
-    border-bottom:2px solid #bab7a2;
-    border-right: 2px solid #bab7a2;
-}
-
 footer{
+    position: absolute;
     margin-top: 4%;
     background-color: #323232;
-
+    bottom: 0;
     width: 100%;
     height: 100px;
 

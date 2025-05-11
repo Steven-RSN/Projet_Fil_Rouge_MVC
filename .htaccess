@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteBase /projetfilsROUGE_MVC/
+
+# Si ce n'est pas un fichier existant
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# Et si ce n'est pas un dossier existant
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Alors rediriger vers index.php
+RewriteRule ^ index.php [QSA,L]
