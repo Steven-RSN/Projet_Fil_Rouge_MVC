@@ -27,186 +27,151 @@
         </div>
     </header>
 
-    <div class="fondGris_">
-        <h1>Nouvelle recette</h1>
-    </div>
+   <div class="fondGris_">
+    <h1>Nouvelle recette</h1>
+</div>
 
-    <main class="mainAjoutR">
-        <form action="" class="formAjoutRecette">
-            <label for=""><!--titre--></label>
-            <input type="text" placeholder="Titre de la recette" class="inputAjoutRecette">
-
-            <div class="divRealisation">
-         
-                <h2>Réalisation :</h2>
-
-            
-            
-                <select name="listeDifficultée" id="uniteSelect" class="Difficulte">
-
-                    <option value="difficulte">Dificulté</option>
-                    <option value="expert">Expert</option>
-                    <option value="difficile">Difficile</option>
-                    <option value="moyen">Moyen</option>
-                    <option value="facile">Facile</option>
-                </select>
-            
-
-           
+<main class="mainAjoutR">
+    <form action="" class="formAjoutRecette">
+        <label for=""><!--titre--></label>
+        <input type="text" name="titre" placeholder="Titre de la recette" class="inputAjoutRecette">
 
 
-                <select name="listeDifficultée" id="uniteSelect" class="sucreSel">
+        <div class="divRealisation">
 
-                    <option value="sucre">Sucré</option>
-                    <option value="sel">Salé</option>
-                   
-                </select>
-                <select name="listeDifficultée" id="uniteSelect" class="Vg">
+            <h2>Réalisation :</h2>
 
-                    <option value="sel">Carnée</option>
-                    <option value="sel">Véganne</option>
-                    <option value="sel">Végétarienne</option>
-                    <option value="sel">Pesco-végétarienne</option>
-                   
-                </select>
+            <select name="listeDifficultée" id="difficulteSelect" class="Difficulte">
+                <?php
+                foreach ($difficult as $row) {
+                    echo '<option value="' . $row['id_difficulty'] . '">' . $row['difficulty'] . '</option>';
+                }
+                ?>
+            </select>
 
-                <select name="listeOrigine" id="uniteSelect" class="origine">
-                    <option value="">Pays</option>
-                    <option value="">Autre</option>
 
-                    <optgroup label="Europe">
-                        <option value="italie">Italie</option>
-                        <option value="france">France</option>
-                        <option value="espagne">Espagne</option>
-                        <option value="allemagne">Allemagne</option>
-                        <option value="grece">Grèce</option>
-                    </optgroup>
-                
-                    <optgroup label="Amérique">
-                        <option value="etats_unis">États-Unis</option>
-                        <option value="canada">Canada</option>
-                        <option value="bresil">Brésil</option>
-                        <option value="argentine">Argentine</option>
-                        <option value="mexique">Mexique</option>
-                    </optgroup>
-                
-                    <optgroup label="Asie">
-                        <option value="chine">Chine</option>
-                        <option value="japon">Japon</option>
-                        <option value="indonesie">Indonésie</option>
-                        <option value="vietnam">Vietnam</option>
-                        <option value="inde">Inde</option>
-                    </optgroup>
-                
-                    <!-- Afrique, avec sous-catégories  -->
-                    <optgroup label="Afrique">
-                            <option value="ouest">Afrique de l'Ouest</option>
-                            <option value="est">Afrique de l'Est</option>
-                            <option value="centrale">Afrique Centrale</option>
-                            <option value="sud">Afrique du Sud</option>
-                    </optgroup>
-                
-                    <!-- Pays arabes -->
-                    <optgroup label="Moyen-Orient">
-                        <option value="algerie">Algérie</option>
-                        <option value="tunisie">Tunisie</option>
-                        <option value="maroc">Maroc</option>
-                        <option value="liban">Liban</option>
-                    </optgroup>
-                </select>
-              
-      
-                <div class="inputRea" >
-                    <label for=" ">Temps total :</label>
-                    <input type="text"class="inputRea" placeholder="25min,1h30...">
-                </div>
-                <div class="inputNbPersonne">
-                    <label for="" >Pour combien :</label>
-                    <input type="text" class="inputNbPersonne"placeholder="1,2,3,4...">
-                </div>
 
-            
+            <select name="type" id="typeSelect" class="sucreSel">
+                <?php
+                foreach ($type as $row) {
+                    echo '<option value="' . $row['Id_type_recette'] . '">' . $row['type_recette'] . '</option>';
+                }
+                ?>
 
+            </select>
+
+            <select name="regime" id="regimSelect" class="Vg">
+                <?php
+                foreach ($diet as $row) {
+                    echo '<option value="' . $row['Id_regime'] . '">' . $row['regime'] . '</option>';
+                }
+                ?>
+
+            </select>
+
+            <select name="listeOrigine" id="regionSelect" class="origine">
+
+                <option value="30">Pays</option>
+                <?php
+                foreach ($regions as $region) {
+                    echo '<option value="' . $region['Id_region'] . '">' . $region['region'] . '</option>';
+                }
+                ?>
+            </select>
+
+
+            <div class="inputRea">
+                <label for=" ">Temps total :</label>
+                <input type="text" name='temps' class="inputRea" id="tempsTotal" placeholder="25min,1h30...">
+            </div>
+            <div class="inputNbPersonne">
+                <label for="">Pour combien :</label>
+                <input type="text" name="combien" class="inputNbPersonne" id="nbPersonne" placeholder="1,2,3,4...">
             </div>
 
 
-            <fieldset class="formAjoutIngredient" >
-                <legend><h3>Ingrédient</h3></legend>
-            
-                <p>(un à la fois)</p>
 
-                <label for=""></label>
-                <input type="text" id="ingredient" placeholder='Pomme, aïl, sucre' class="inputAjoutIngr">
+        </div>
 
+
+        <fieldset class="formAjoutIngredient">
+            <legend>
+                <h3>Ingrédient</h3>
+            </legend>
+
+            <p id='h3Ingredient'>(un à la fois)</p>
+
+            <label for=""></label>
+            <input type="text" id="ingredient" name="ingredient" placeholder='Pomme, aïl, sucre' class="inputAjoutIngr">
+
+            <div>
                 <div>
-                    <div>
-                        <label for=""></label>
-                        <input type="text"placeholder='1,2,3...' class="inputAjoutIngr" id="ingredientQ">
-                    </div>
-                    <label for=""><!--chosse unity--></label>
-                    <select name="unite" id="uniteSelect" class="inputAjoutIngr">
-
-                        <option value="">Unité</option>
-                        <option value="gramme">Gramme</option>
-                        <option value="kilos">Kilos</option>
-                        <option value="centilires">Centilitres</option>
-                        <option value="litres">Litres</option>
-                        <option value="cac">Cuillere à C</option>
-                        <option value="cas">Cuillere à S</option>
-
-                    </select>
+                    <label for=""></label>
+                    <input type="text" placeholder='1,2,3...' name="ingredientQ" class="inputAjoutIngr" id="ingredientQ">
                 </div>
-                <input type="submit" class="btnAjout" value="Ajouter">
-                
-                
-    
-                        
 
 
-            </fieldset>
-            <fieldset class="formTextArea" >
-                <legend><h3>Les etapes</h3></legend>
-            
-                <label for="" class="legende">(Une à la fois)</label>
-                <textarea name="" id="etapeDeRealisation" placeholder="Rentrez une etape à la fois"></textarea>
-           
-                <input type="submit" class="btnAjout" value="Ajouter">
-                
-            </fieldset>
-            
-            <h2>Ajouter des Images</h2>
+                <label for=""><!--chosse unity--></label>
+                <select name="unite" id="uniteSelect" default='Unité' class="inputAjoutIngr">
 
-            <form action="/upload" method="POST" enctype="multipart/form-data">
-                
-                <div class="dropzone">
-                    Déposez vos fichiers ici ou cliquez pour les sélectionner.
-                    <input type="file" name="files[]" accept="image/*" multiple>
-                </div>              
+                    <?php
+
+                    foreach ($unite as $row) {
+                        echo '<option value="' . $row['nom_unite'] . '" id="' . $row['Id_unite'] . '">' . $row['nom_unite'] . '</option>';
+                    }
+                    ?>
 
 
-            </form> <!-- - -A modifier ?- - -->
-
-
-            <div class="status">
-                <h3>Définissez le status de la recette :</h3>
-                <ul>
-                    <li><input type="radio" name="status">Privé</li>
-                    <li><input type="radio" name="status">Public </li>
-                    <li><input type="radio" name="status">Amie uniquement</li>
-                </ul>
-
+                </select>
             </div>
-            
-            <input type="submit" value="Ajouter" id="AjouterRecette">
+            <button type="button" id="btnAjoutIngredient" class="btnAjout">Ajouter</button>
+            <!-- <input type="submit" id="btnAjoutIngredient" name='submitIng' class="btnAjout" value="Ajouter"> -->
+            <ul id="listeIngredients"></ul>
 
-        </form>
-    
-    </main>
 
-    
-    <footer>
-        <div class="fondGrisFooter"></div>
-        
-            
-    </footer>
-</body>
+
+
+        </fieldset>
+
+        <fieldset class="formTextArea">
+            <legend>
+                <h3 id='EtapeH3'>Les etapes</h3>
+            </legend>
+
+            <label for="" class="legende">(Une à la fois)</label>
+            <textarea id="etapeDeRealisation" name='etapes' placeholder="Rentrez une etape à la fois"></textarea>
+
+            <button name='submitEtapes' id="btnEtape" class="btnAjout">Ajouter</button>
+
+        </fieldset>
+
+        <h2>Ajouter des Images</h2>
+
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+
+            <div class="dropzone">
+                Déposez vos fichiers ici ou cliquez pour les sélectionner.
+                <input type="file" id="inputImage" name="files[]" accept="image/*" multiple>
+            </div>
+            <div id="previewImages" style="display: flex; gap: 10px; margin-top: 10px;"></div>
+
+        </form> <!-- - -A modifier ?- - -->
+
+
+        <div class="status">
+            <h3>Définissez le status de la recette :</h3>
+            <ul>
+                <li><input type="radio" class="radioStatu" name="status" value="1" checked>Privé</li>
+                <li><input type="radio" class="radioStatu" name="status" value="2">Public </li>
+                <li><input type="radio" class="radioStatu" name="status" value="3">Ami uniquement</li>
+            </ul>
+
+        </div>
+
+        <!-- <input type="submit" value="Ajouter"> -->
+        <button type="button" name="submitRecette" id="AjouterRecette">Ajouter un recette</button>
+
+    </form>
+
+
+</main>

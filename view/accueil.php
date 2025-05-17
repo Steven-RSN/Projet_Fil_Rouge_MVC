@@ -135,193 +135,206 @@
         <h1 class="fondGris">Recette</h1>
 
 
-        <div class="vigniette_recette">
-            <div class="img_recette ">
-                <h6 class="titreRecette">Burger</h6>
+        <!-- <div class="vigniette_recette">
+            <div class="img_recette " style=" background-image:url('</?php echo $dataImage[0] ?>');">
+                <h6 class="titreRecette"></?php echo $dataname[0] ?></h6>
                 <div class="temp">
                     <div class="img-utilisateur"></div>
                     <p class="nomUtilisateur">Alain Ducasse</p>
                 </div>
             </div>
-            <div class="etoils">
+            <div class="etoils"> -->
 
+        <?php foreach ($dataRecette as $recette): ?>
+            <div class="vigniette_recette">
+                <div class="img_recette" style="background-image: url('<?= htmlspecialchars($recette['url_image']) ?>');">
+                    <h6 class="titreRecette"><?= htmlspecialchars($recette['nom_recette']) ?></h6>
+                    <div class="temp">
+                        <div class="img-utilisateur"></div>
+                        <p class="nomUtilisateur">Unknown <? ?></p>
+                    </div>
+                </div>
+                <div class="etoils">
 
-
-            </div>
-        </div>
-
-        <div class="vigniette_recette">
-            <div class="img_recette">
-                <h6 class="titreRecette">Burger</h6>
-                <div class="temp">
-                    <div class="img-utilisateur"></div>
-                    <p class="nomUtilisateur">Alain Ducasse</p>
                 </div>
             </div>
-            <div class="etoils">
+        <?php endforeach; ?>
 
+    </div>
+    </div>
 
-                <!-- placer un truc ?  -->
-
+    <div class="vigniette_recette">
+        <div class="img_recette">
+            <h6 class="titreRecette">Burger</h6>
+            <div class="temp">
+                <div class="img-utilisateur"></div>
+                <p class="nomUtilisateur">Alain Ducasse</p>
             </div>
         </div>
-
-        <div class="vigniette_recette">
-            <div class="img_recette">
-                <h6 class="titreRecette">Burger</h6>
-                <div class="temp">
-                    <div class="img-utilisateur"></div>
-                    <p class="nomUtilisateur">Alain Ducasse</p>
-                </div>
-            </div>
-            <div class="etoils">
+        <div class="etoils">
 
 
-                <!-- placer un truc ?  -->
-
-            </div>
-        </div>
-
-        <div class="vigniette_recette">
-            <div class="img_recette">
-                <h6 class="titreRecette">Burger</h6>
-                <div class="temp">
-                    <div class="img-utilisateur"></div>
-                    <p class="nomUtilisateur">Alain Ducasse</p>
-                </div>
-            </div>
-            <div class="etoils">
-
-
-                <!-- placer un truc ?  -->
-
-            </div>
-        </div>
-
-        <div class="vigniette_recette">
-            <div class="img_recette">
-                <h6 class="titreRecette">Burger</h6>
-                <div class="temp">
-                    <div class="img-utilisateur"></div>
-                    <p class="nomUtilisateur">Alain Ducasse</p>
-                </div>
-            </div>
-            <div class="etoils">
-
-
-                <!-- placer un truc ?  -->
-
-            </div>
-        </div>
-        <div class="vigniette_recette">
-            <div class="img_recette">
-                <h6 class="titreRecette">Burger</h6>
-                <div class="temp">
-                    <div class="img-utilisateur"></div>
-                    <p class="nomUtilisateur">Alain Ducasse</p>
-                </div>
-            </div>
-            <div class="etoils">
-
-
-                <!-- placer un truc ?  -->
-
-            </div>
-        </div>
-
-
-        <div class="vigniette_recette">
-            <div class="img_recette">
-                <h6 class="titreRecette">Burger</h6>
-                <div class="temp">
-                    <div class="img-utilisateur"></div>
-                    <p class="nomUtilisateur">Alain Ducasse</p>
-                </div>
-            </div>
-            <div class="etoils">
-
-
-                <!-- placer un truc ?  -->
-
-            </div>
-        </div>
-        <div class="vigniette_recette">
-            <div class="img_recette">
-                <h6 class="titreRecette">Burger</h6>
-                <div class="temp">
-                    <div class="img-utilisateur"></div>
-                    <p class="nomUtilisateur">Alain Ducasse</p>
-                </div>
-            </div>
-            <div class="etoils">
-
-
-                <!-- placer un truc ?  -->
-
-            </div>
-        </div>
-        <div class="vigniette_recette">
-            <div class="img_recette">
-                <h6 class="titreRecette">Burger</h6>
-                <div class="temp">
-                    <div class="img-utilisateur"></div>
-                    <p class="nomUtilisateur">Alain Ducasse</p>
-                </div>
-            </div>
-            <div class="etoils">
-
-
-                <!-- placer un truc ?  -->
-
-            </div>
-        </div>
-        <div class="vigniette_recette">
-            <div class="img_recette">
-                <h6 class="titreRecette">Burger</h6>
-                <div class="temp">
-                    <div class="img-utilisateur"></div>
-                    <p class="nomUtilisateur">Alain Ducasse</p>
-                </div>
-            </div>
-            <div class="etoils">
-
-
-                <!-- placer un truc ?  -->
-
-            </div>
-        </div>
-        <div class="vigniette_recette">
-            <div class="img_recette">
-                <h6 class="titreRecette">Burger</h6>
-                <div class="temp">
-                    <div class="img-utilisateur"></div>
-                    <p class="nomUtilisateur">Alain Ducasse</p>
-                </div>
-            </div>
-            <div class="etoils">
-
-
-                <!-- placer un truc ?  -->
-
-            </div>
-        </div>
-        <div class="vigniette_recette">
-            <div class="img_recette">
-                <h6 class="titreRecette">Burger</h6>
-                <div class="temp">
-                    <div class="img-utilisateur"></div>
-                    <p class="nomUtilisateur">Alain Ducasse</p>
-                </div>
-            </div>
-            <div class="etoils">
-
-
-                <!-- placer un truc ?  -->
-
-            </div>
-
+            <!-- placer un truc ?  -->
 
         </div>
+    </div>
+
+    <div class="vigniette_recette">
+        <div class="img_recette">
+            <h6 class="titreRecette">Burger</h6>
+            <div class="temp">
+                <div class="img-utilisateur"></div>
+                <p class="nomUtilisateur">Alain Ducasse</p>
+            </div>
+        </div>
+        <div class="etoils">
+
+
+            <!-- placer un truc ?  -->
+
+        </div>
+    </div>
+
+    <div class="vigniette_recette">
+        <div class="img_recette">
+            <h6 class="titreRecette">Burger</h6>
+            <div class="temp">
+                <div class="img-utilisateur"></div>
+                <p class="nomUtilisateur">Alain Ducasse</p>
+            </div>
+        </div>
+        <div class="etoils">
+
+
+            <!-- placer un truc ?  -->
+
+        </div>
+    </div>
+
+    <div class="vigniette_recette">
+        <div class="img_recette">
+            <h6 class="titreRecette">Burger</h6>
+            <div class="temp">
+                <div class="img-utilisateur"></div>
+                <p class="nomUtilisateur">Alain Ducasse</p>
+            </div>
+        </div>
+        <div class="etoils">
+
+
+            <!-- placer un truc ?  -->
+
+        </div>
+    </div>
+    <div class="vigniette_recette">
+        <div class="img_recette">
+            <h6 class="titreRecette">Burger</h6>
+            <div class="temp">
+                <div class="img-utilisateur"></div>
+                <p class="nomUtilisateur">Alain Ducasse</p>
+            </div>
+        </div>
+        <div class="etoils">
+
+
+            <!-- placer un truc ?  -->
+
+        </div>
+    </div>
+
+
+    <div class="vigniette_recette">
+        <div class="img_recette">
+            <h6 class="titreRecette">Burger</h6>
+            <div class="temp">
+                <div class="img-utilisateur"></div>
+                <p class="nomUtilisateur">Alain Ducasse</p>
+            </div>
+        </div>
+        <div class="etoils">
+
+
+            <!-- placer un truc ?  -->
+
+        </div>
+    </div>
+    <div class="vigniette_recette">
+        <div class="img_recette">
+            <h6 class="titreRecette">Burger</h6>
+            <div class="temp">
+                <div class="img-utilisateur"></div>
+                <p class="nomUtilisateur">Alain Ducasse</p>
+            </div>
+        </div>
+        <div class="etoils">
+
+
+            <!-- placer un truc ?  -->
+
+        </div>
+    </div>
+    <div class="vigniette_recette">
+        <div class="img_recette">
+            <h6 class="titreRecette">Burger</h6>
+            <div class="temp">
+                <div class="img-utilisateur"></div>
+                <p class="nomUtilisateur">Alain Ducasse</p>
+            </div>
+        </div>
+        <div class="etoils">
+
+
+            <!-- placer un truc ?  -->
+
+        </div>
+    </div>
+    <div class="vigniette_recette">
+        <div class="img_recette">
+            <h6 class="titreRecette">Burger</h6>
+            <div class="temp">
+                <div class="img-utilisateur"></div>
+                <p class="nomUtilisateur">Alain Ducasse</p>
+            </div>
+        </div>
+        <div class="etoils">
+
+
+            <!-- placer un truc ?  -->
+
+        </div>
+    </div>
+    <div class="vigniette_recette">
+        <div class="img_recette">
+            <h6 class="titreRecette">Burger</h6>
+            <div class="temp">
+                <div class="img-utilisateur"></div>
+                <p class="nomUtilisateur">Alain Ducasse</p>
+            </div>
+        </div>
+        <div class="etoils">
+
+
+            <!-- placer un truc ?  -->
+
+        </div>
+    </div>
+    <div class="vigniette_recette">
+        <div class="img_recette">
+            <h6 class="titreRecette">Burger</h6>
+            <div class="temp">
+                <div class="img-utilisateur"></div>
+                <p class="nomUtilisateur">Alain Ducasse</p>
+            </div>
+        </div>
+        <div class="etoils">
+
+
+            <!-- placer un truc ?  -->
+
+        </div>
+
+
+    </div>
 
 
 

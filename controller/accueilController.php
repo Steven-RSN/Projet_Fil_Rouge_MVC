@@ -1,27 +1,44 @@
 <?php
 
-   session_start();
-
-   // include './model/user_model.php';
-   // include './utils/function.php';
-   
-   // //include './view/header.php';
-   // include './view/headerAccueil.php';
-   // include './view/accueil.php';
-   // include './view/footerAccueil.php';
+session_start();
+include './model/user_model.php';
+include './utils/function.php';
+include './model/recette_model.php';
 
 
+class AccueilController
+{
+    public function initRecette()
+    {
+        $dataImages = '';
 
-//    require_once '../model/user_model.php';
-//    require_once '../utils/function.php';
-   
-//    class AccueilController {
-//        public function index() {
-//            // Ici tu peux faire des traitements PHP avant affichage
-   
-//            // Chargement des vues
-//            require_once '../view/headerAccueil.php';
-//            require_once '../view/accueil.php';
-//            require_once '../view/footerAccueil.php';
-//        }
-//    }
+        $dataRecette = getRecette(connectBdd());
+        error_log(print_r('ICUDBJIHFDCB IJSBDFJIBCIJDS', true));
+        error_log(print_r($dataRecette, true));
+
+        // foreach ($dataRecette as $data) {
+        //     $dataname[] = $data['nom_recette'];
+        //     error_log(print_r($dataname, true));
+        // }
+        // // error_log(print_r($dataRecette[0]['nom_recette'], true));
+        // error_log(print_r("dataname", true));
+        // error_log(print_r($dataname, true));
+
+        return $dataRecette;
+    }
+
+    // public function initImage()
+    // {
+    //     $dataRecette = getRecette(connectBdd());
+    //     foreach ($dataRecette as $data) {
+    //         // error_log(print_r('$data', true));
+
+    //         // error_log(print_r($data, true));
+
+    //         $dataImage = getImagePathByIdRecette(connectBdd(), $data['Id_recette']);
+    //         error_log(print_r($dataImage, true));
+    //     }
+
+    //     return $dataImage;
+    // }
+}

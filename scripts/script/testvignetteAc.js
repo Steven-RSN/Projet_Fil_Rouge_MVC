@@ -1,4 +1,4 @@
-import recueil from "./glossaire.js";
+//import recueil from "./glossaire.js";
 
 
 // Initialise les variables et récupère les élements HTML

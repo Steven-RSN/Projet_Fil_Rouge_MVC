@@ -9,12 +9,12 @@ $basePath = '/PROJETFILSROUGE_MVC';
 $route = str_replace($basePath, '', $path);
 
 //3) Comparer le path obtenu avec les routes mises en place
-switch($route){
+switch ($route) {
     //Route de la page d'Accueil
-    case '/' :
+    case '/': 
         include './controller/AccueilController.php';
-        include './model/user_model.php';
-        include './utils/function.php';
+        $controller = new AccueilController();
+        $dataRecette = $controller->initRecette();
         include './view/headerAccueil.php';
         include './view/accueil.php';
         include './view/footerAccueil.php';
@@ -25,14 +25,14 @@ switch($route){
         include './controller/ConnexionController.php';
         $controller = new ConnexionController();
         $message = $controller->connexion(); // récupère le message depuis la logique
-    
+
         // Maintenant, inclure les vues avec $message disponible
         include './view/headerConnexion.php';
         include './view/connexion.php';
         include './view/footerConnexion.php';
         break;
     //Route pour la page d'inscription
-    case '/inscription' :
+    case '/inscription':
         include './controller/inscriptionController.php';
         $controller = new InscriptionController();
         $message = $controller->inscription(); // récupère le message depuis la logique
@@ -40,15 +40,18 @@ switch($route){
         include "./view/headInscription.php";
         include "./view/inscription.php";
         include "./view/footerInscription.php";
-        
+
         break;
 
-    case '/nouvelle_recette' :
-        include "./view/newRecipe.php";
+    case '/nouvelle_recette':
+        include './utils/function.php';
+        include "./model/recette_model.php";
+        include "./controller/NouvelleRecetteController.php";
         include "./view/headerNewRecipe.php";
+        include "./view/newRecipe.php";
         break;
 
-    case '/utilisateur' :
+    case '/utilisateur':
         include "./view/utilisateur.php";
         include "./view/headerUtilisateur.php";
         break;
@@ -59,7 +62,7 @@ switch($route){
         break;
 
     //PAGE Erreur 404
-    default :
+    default:
         echo "<h1>404 NOT FOUND</h1>";
         break;
 }
