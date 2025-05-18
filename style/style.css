@@ -310,7 +310,7 @@ header .divIconUtilisateur:hover{
     box-shadow: 6px 6px 8px  rgba(0, 0, 0, 0.160);
 }
 
-.vigniette_recette{ 
+.vignette_recette{ 
     height: 280px;
     width: 180px;
     margin: 4% 4%;
@@ -322,7 +322,7 @@ header .divIconUtilisateur:hover{
     
     
 }
-.vigniette_recette:hover{ 
+.vignette_recette:hover{ 
     transform: scale(1.05);
     transition: 0.8s;
 }

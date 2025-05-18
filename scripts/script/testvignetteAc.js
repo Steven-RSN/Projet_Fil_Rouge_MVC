@@ -235,11 +235,11 @@ const recettesContainer = document.querySelector('.itemPopulaire'); // Conteneur
 const nombreRecettesMax = 12;
 
 voirPlusBtn.addEventListener('click', function () {
-    let nombreRecettesInitiales = document.getElementsByClassName('vigniette_recette').length;
+    let nombreRecettesInitiales = document.getElementsByClassName('vignette_recette').length;
 
     if (voirPlusBtn.innerText === 'Voir moins') {
  
-        while (document.getElementsByClassName('vigniette_recette').length > nombreRecettesMax) {
+        while (document.getElementsByClassName('vignette_recette').length > nombreRecettesMax) {
             recettesContainer.removeChild(recettesContainer.lastChild);
         }
         voirPlusBtn.innerText = 'Voir plus';
@@ -250,7 +250,7 @@ voirPlusBtn.addEventListener('click', function () {
             
             // Création de la div principale
             let divRecette = document.createElement('div');
-            divRecette.classList.add('vigniette_recette');
+            divRecette.classList.add('vignette_recette');
 
             // Création de l'image et du titre
             let imgRecette = document.createElement('div');

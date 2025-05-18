@@ -9,16 +9,16 @@
         <nav class="menuBurger">
             <ul class="ulMenuBurger">
 
-            <li><a href="./">Accueil</a></li>
-            <li><a href="utilisateur">Mes favoris</a></li>
-            <li><a href="nouvelle_recette">Ajouter une recette</a></li>
-            <li><a href="utilisateur">Mon compte</a></li>
-            <li><a href="contact">Contact</a></li>
+                <li><a href="./">Accueil</a></li>
+                <li><a href="utilisateur">Mes favoris</a></li>
+                <li><a href="nouvelle_recette">Ajouter une recette</a></li>
+                <li><a href="utilisateur">Mon compte</a></li>
+                <li><a href="contact">Contact</a></li>
+
             </ul>
         </nav>
         <h1 class="marque">- Stivi's Kitchen - </h1>
 
-        <!-- <img id="Stivisk" src="Image/icons/iconMarque.png" alt=""> -->
         <div class="divIconUtilisateur">
             <a href="connexion.html">
                 <img id="iconUtilisateur" src="Image/icons/icons8-cuisinier-homme-100 (1).png" alt="">
@@ -39,9 +39,8 @@
                 <button>Suivre</button>
             </div>
         </div>
-        <div class="basCarte"></div> <!-- Ajout d'une section pour la bande colorée -->
+        <div class="basCarte"></div>
     </div>
-
 
     <main>
         <div class="center">
@@ -68,18 +67,6 @@
 
         <div class="itemPopulaire">
 
-            <!-- <div class="vigniette_recette" >
-                <div class="img_recette">
-                    <h6 class="titreRecette">Burger</h6>
-                    <div class="temp">
-                        <div class="img-utilisateur"></div>
-                        <p class="nomUtilisateur">Alain Ducasse</p>
-                    </div>
-                </div>
-                <div class="etoils">
-    
-                </div>
-            </div> -->
         </div>
     </main>
 

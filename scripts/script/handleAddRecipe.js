@@ -1,6 +1,5 @@
 
-let idtemp = 1; // Identifiant temporaire pour la recette
-// Tableau pour stocker les ingrédients ajoutés
+// Objet pour stocker les attributs de la recette
 const recette = {
     nom: '',
     difficulty: 3,
@@ -9,7 +8,6 @@ const recette = {
     region: 0,
     temps: '',
     nbPersonne: 0,
-    idRecette: idtemp,
     ingredients: [],
     listeEtape: [],
     images: [],
@@ -32,14 +30,12 @@ const quantityInput = document.getElementById("ingredientQ"); // Champ de saisie
 const unitSelect = document.getElementById("uniteSelect"); // Sélecteur pour le nom de l'unité (litre,gramme...) 
 const ajoutBtn = document.getElementById("btnAjoutIngredient"); // Bouton d'ajout d'ingrédient
 
-ajoutBtn.addEventListener("click", function (event) {
-    event.preventDefault();// Empêcher le rechargement de la page
+ajoutBtn.addEventListener("click", function () {
 
     const ingredient = ingredientInput.value;
     const quantity = quantityInput.value;
     const nomUnite = unitSelect.value;
-
-    //console.log('quantity, nomUnite, ingredient :', quantity, nomUnite, ingredient)
+console.log('ici')
     // Vérifie que la quantité est un nombre et que l'ingrédient est une string
     if (isNaN(quantity) || quantity === "") {
         return;
@@ -99,11 +95,6 @@ function update() {
     contenairIngr.appendChild(ul);
 }
 
-// function getIngredients() {
-//     return ingredients; // Retourne la liste actuelle des ingrédients
-// }
-
-
 
 //Fonction pour les Etapes   
 // Création d'une div pour afficher la liste des ingrédients à ajouter
@@ -150,7 +141,6 @@ function updateEtape() {
     contenairEtape.innerHTML = ""; // Efface la liste existante avant de la reconstruire
     const ul = document.createElement("ol"); // Création d'une liste
 
-    //console.log(recette)
     recette.listeEtape.forEach((etape, index) => {
         const li = document.createElement("li");
         // Ajout du texte et du bouton suppresion dans le li 

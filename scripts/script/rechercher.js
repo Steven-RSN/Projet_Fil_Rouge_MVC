@@ -50,7 +50,7 @@ searchForm.addEventListener('submit', function(e) {
         btnVoirPlus.style.display='none'
         recettesTrouvees.forEach((recette, index) => {
             const recetteElement = document.createElement('div');
-            recetteElement.className = 'vigniette_recette';
+            recetteElement.className = 'vignette_recette';
 
             const imgRecette = document.createElement('div');
             imgRecette.className = 'img_recette';

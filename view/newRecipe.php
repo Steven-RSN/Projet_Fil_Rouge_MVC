@@ -1,6 +1,5 @@
 <body>
     <header id="header">
-        <!-- <img id="iconMenuB" src="Image/icons/icons8-menu-192.png" alt=""> -->
         <label for="menuLabel" id="iconMenuBg">
             <img src="Image/icons/icons8-menu-192.png" id="iconMenuB" alt="Menu">
         </label>
@@ -18,27 +17,17 @@
             </ul>
         </nav>
         <h1 class="marque">- Stivi's Kitchen - </h1>
-
-        <!-- <img id="Stivisk" src="Image/icons/iconMarque.png" alt=""> -->
-        <div class="divIconUtilisateur">
-            <a href="connexion.html">
-                <img id="iconUtilisateur" src="Image/icons/icons8-cuisinier-homme-100 (1).png" alt="">
-            </a>
-        </div>
     </header>
 
    <div class="fondGris_">
     <h1>Nouvelle recette</h1>
 </div>
-
 <main class="mainAjoutR">
     <form action="" class="formAjoutRecette">
-        <label for=""><!--titre--></label>
+        <label for=""></label>
         <input type="text" name="titre" placeholder="Titre de la recette" class="inputAjoutRecette">
 
-
         <div class="divRealisation">
-
             <h2>Réalisation :</h2>
 
             <select name="listeDifficultée" id="difficulteSelect" class="Difficulte">
@@ -48,8 +37,6 @@
                 }
                 ?>
             </select>
-
-
 
             <select name="type" id="typeSelect" class="sucreSel">
                 <?php
@@ -79,7 +66,6 @@
                 ?>
             </select>
 
-
             <div class="inputRea">
                 <label for=" ">Temps total :</label>
                 <input type="text" name='temps' class="inputRea" id="tempsTotal" placeholder="25min,1h30...">
@@ -88,8 +74,6 @@
                 <label for="">Pour combien :</label>
                 <input type="text" name="combien" class="inputNbPersonne" id="nbPersonne" placeholder="1,2,3,4...">
             </div>
-
-
 
         </div>
 
@@ -100,7 +84,6 @@
             </legend>
 
             <p id='h3Ingredient'>(un à la fois)</p>
-
             <label for=""></label>
             <input type="text" id="ingredient" name="ingredient" placeholder='Pomme, aïl, sucre' class="inputAjoutIngr">
 
@@ -110,8 +93,7 @@
                     <input type="text" placeholder='1,2,3...' name="ingredientQ" class="inputAjoutIngr" id="ingredientQ">
                 </div>
 
-
-                <label for=""><!--chosse unity--></label>
+                <label for=""></label>
                 <select name="unite" id="uniteSelect" default='Unité' class="inputAjoutIngr">
 
                     <?php
@@ -120,17 +102,9 @@
                         echo '<option value="' . $row['nom_unite'] . '" id="' . $row['Id_unite'] . '">' . $row['nom_unite'] . '</option>';
                     }
                     ?>
-
-
                 </select>
             </div>
             <button type="button" id="btnAjoutIngredient" class="btnAjout">Ajouter</button>
-            <!-- <input type="submit" id="btnAjoutIngredient" name='submitIng' class="btnAjout" value="Ajouter"> -->
-            <ul id="listeIngredients"></ul>
-
-
-
-
         </fieldset>
 
         <fieldset class="formTextArea">
@@ -146,17 +120,11 @@
         </fieldset>
 
         <h2>Ajouter des Images</h2>
-
-        <form action="/upload" method="POST" enctype="multipart/form-data">
-
-            <div class="dropzone">
-                Déposez vos fichiers ici ou cliquez pour les sélectionner.
-                <input type="file" id="inputImage" name="files[]" accept="image/*" multiple>
-            </div>
-            <div id="previewImages" style="display: flex; gap: 10px; margin-top: 10px;"></div>
-
-        </form> <!-- - -A modifier ?- - -->
-
+        <div class="dropzone">
+            Déposez vos fichiers ici ou cliquez pour les sélectionner.
+            <input type="file" id="inputImage" name="files[]" accept="image/*" multiple>
+        </div>
+        <div id="previewImages" style="display: flex; gap: 10px; margin-top: 10px;"></div>
 
         <div class="status">
             <h3>Définissez le status de la recette :</h3>
@@ -168,8 +136,7 @@
 
         </div>
 
-        <!-- <input type="submit" value="Ajouter"> -->
-        <button type="button" name="submitRecette" id="AjouterRecette">Ajouter un recette</button>
+        <button type="button" name="submitRecette" id="AjouterRecette">Ajouter la recette</button>
 
     </form>
 
